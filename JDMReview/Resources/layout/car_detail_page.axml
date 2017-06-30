@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4">
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/regTextView"
+        android:layout_marginLeft="6dip"
+        android:layout_marginTop="6dip"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FF9800" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#000000" />
+<!--MAKE-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="3dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Make"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/makeTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--MODEL-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Model"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/modelTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--BODY-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Body"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/bodyTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--COLOUR-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Colour"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/colourTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+<!--DATE-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="3dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Date Registered"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/dateTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--FUEL-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Fuel"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/fuelTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--TRANSMISSION-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Transmission"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/transmissionTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--ASPIRATION-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Aspiration"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/aspirationTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--ENGINE SIZE-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Engine Size"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/sizeTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--Cylinders-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Cylinders"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/cylindersTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--Cylinder arrangement-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Cylinder Arrangement"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/arrangementTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--Valvers Per Cylinders-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Valves Per Cylinder"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/valvesTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--Cam Type-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Cam Type"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/camTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--HORSEPOWER-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Power (bhp)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/hpTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--TORQUE-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Torque (FtLb)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/torqueTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--Top Speed-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Top Speed (mph)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/topspeedTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:id="@+id/view1"
+        android:background="#BDBDBD" />
+<!--Consumption-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Combined Consumption (mpg)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginRight="4dip"
+            android:id="@+id/consumptionTextView"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>

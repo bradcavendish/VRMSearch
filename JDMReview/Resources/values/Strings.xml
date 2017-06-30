@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">JDMReview</string>
+    <string name="MakePrompt">Select Make...</string>
+  <string name="ModelPrompt">Select Model...</string>
+  
+  
+  <string-array name="make_array">
+    <item>Car1</item>
+    <item>Car2asdfasd</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+    <item>Car3</item>
+  </string-array>
+
+  <string-array name="model_array">
+    <item>model 1</item>
+    <item>model 2</item>
+  </string-array>
+  
+  
+</resources>

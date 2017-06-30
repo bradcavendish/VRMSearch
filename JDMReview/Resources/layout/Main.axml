@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="#00BCD4">
+    <TextView
+        android:text="Enter Reg No:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_marginLeft="6dip"
+        android:layout_marginTop="40dip"
+        android:gravity="center_horizontal"
+        android:textColor="#212121" />
+    <EditText
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_gravity="center_horizontal"
+        android:capitalize="characters"
+        android:gravity="center_horizontal"
+        android:background="#0097A7"
+        android:textColor="#757575"
+        android:layout_marginTop="30dip" />
+    <Button
+        android:text="Go"
+        android:layout_marginTop="20dip"
+        android:layout_width="120dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="30dip"
+        android:id="@+id/button1"
+        android:background="#FF9800" />
+    <Button
+        android:text="Seach History"
+        android:layout_marginTop="10dip"
+        android:layout_width="120dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="30dip"
+        android:id="@+id/historyButton"
+        android:background="#FF9800" />
+</LinearLayout>
