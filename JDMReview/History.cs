@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 
 using SQLite;
+using Newtonsoft.Json;
 
 namespace JDMReview
 {
@@ -28,12 +29,15 @@ namespace JDMReview
             // Create your application here
             RequestWindowFeature(Android.Views.WindowFeatures.NoTitle);
 
-            SetContentView(Resource.Layout.search_history_page);
+            //set layout
+            SetContentView(Resource.Layout.search_history_page);           
 
             //create empty list of cars
             carsInDb = new List<Car>();
+            //make reference to listView
             listView = FindViewById<ListView>(Resource.Id.carListView);
-            
+            //create click event for listview item
+            listView.ItemClick += ListView_ItemClick;
 
             //get db path from intent and create connection
             var dbPath = Intent.GetStringExtra("dbPath");
@@ -79,6 +83,25 @@ namespace JDMReview
 
         }
 
-        
+        private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            //get the car at position clicked
+            Car car = carsInDb[e.Position];
+
+            //use intent to show car detail page with car clicked on
+
+            //serialize that car
+            var serializedCar = JsonConvert.SerializeObject(car);
+
+            //create intent
+            var intent = new Intent(this, typeof(CarDetailPage));
+
+            //attach serialized car to intent
+            intent.PutExtra("car", serializedCar);
+
+            //start activity
+            StartActivity(intent);
+            
+        }
     }
 }

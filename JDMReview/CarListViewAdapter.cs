@@ -20,7 +20,7 @@ namespace JDMReview
         public CarListViewAdapter(Context context, List<Car> cars)
         {
             this.cars = cars;
-            this.context = context;
+            this.context = context;           
         }
 
         public override Car this[int position] { get { return cars[position]; } }

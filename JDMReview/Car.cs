@@ -6,10 +6,7 @@ namespace JDMReview
     {
         //public properties
         public string Make{get;set;}
-        public string Model
-        {
-            get;set;
-        }
+        public string Model{get;set;}
         public string Body
         {
             get;set;
@@ -75,9 +72,9 @@ namespace JDMReview
             get;set;
         }
 
-        public override string ToString()
-        {
-            return Reg + " " + Make + " " + Model;
-        }
+        //public override string ToString()
+        //{
+        //    return Reg + " " + Make + " " + Model;
+        //}
     }
 }

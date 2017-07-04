@@ -28,6 +28,8 @@ namespace JDMReview
         static string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbCar.db3");
         SQLiteConnection db = new SQLiteConnection(dbPath);
 
+        EditText regNo;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -41,8 +43,8 @@ namespace JDMReview
             Button goButton = FindViewById<Button>(Resource.Id.button1);
             Button historyButton = FindViewById<Button>(Resource.Id.historyButton);
 
-            
-            //set up db table incase it is first time and db does not exist
+
+            //set up db table incase it is first time and db does not exist          
             db.CreateTable<Car>();
 
             //handle button click
@@ -61,14 +63,14 @@ namespace JDMReview
         private async void GoButton_Click (object sender, EventArgs e)
         {
             //link for edit text with reg no.
-            EditText regNo = FindViewById<EditText>(Resource.Id.editText1);
+            regNo = FindViewById<EditText>(Resource.Id.editText1);
 
             //create progress dialog
             ProgressDialog m = new ProgressDialog(this);
             m.SetCancelable(false);
             m.SetMessage("Fetching Car Info...");
 
-            //use progressdialog to show searching
+            //use progress dialog to show searching
             m.Show();
 
             //find car with api
@@ -76,8 +78,10 @@ namespace JDMReview
             string regWithSpace = regNo.Text;
             //remove spaces with regex
             string reg = Regex.Replace(regWithSpace, @"\s+", "");
+            //api key
+            string apiKey = "0a5a9dd8-e7ea-4494-84a3-13c5c597ddc9";
             //make url
-            string url = "https://uk1.ukvehicledata.co.uk/api/datapackage/VehicleData?api_rv=2&api_nullitems=1&auth_apikey=0a5a9dd8-e7ea-4494-84a3-13c5c597ddc9&key_VRM=" + reg;
+            string url = "https://uk1.ukvehicledata.co.uk/api/datapackage/VehicleData?api_rv=2&api_nullitems=1&auth_apikey=" + apiKey + "&key_VRM=" + reg;
 
             JsonValue json = await Fetch(url);
             m.Hide();
@@ -88,7 +92,7 @@ namespace JDMReview
             {
                 Toast.MakeText(this, "Invalid VRM", ToastLength.Long).Show();
             }
-            else if (statusCode == "ServiceUnavailable")
+            else if (statusCode == "ServiceUnavailable" || statusCode == "ItemNotFound")
             {
                 Toast.MakeText(this, "VRM Not Found", ToastLength.Long).Show();
             }
@@ -107,6 +111,10 @@ namespace JDMReview
                 var intent = new Intent(this, typeof(CarDetailPage));
                 //add the serialized car to the intent with a key of car
                 intent.PutExtra("car", serializedCar);
+
+                //reset textedit
+                regNo.Text = "";
+
                 //start the intent
                 StartActivity(intent);
             }
@@ -114,11 +122,10 @@ namespace JDMReview
             {
                 Toast.MakeText(this, "Error", ToastLength.Long).Show();
             }
-
         }
 
         private void saveToDB(Car car, SQLiteConnection db)
-        {          
+        {
             //store car
             db.Insert(car);
         }
@@ -178,7 +185,6 @@ namespace JDMReview
 
         private async Task<JsonValue> Fetch(string url)
         {
-
             // Create an HTTP web request using the URL:
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
             request.ContentType = "application/json";
